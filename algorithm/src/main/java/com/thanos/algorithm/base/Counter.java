@@ -1,4 +1,4 @@
-package com.thanos.algorithm.base.adt;
+package com.thanos.algorithm.base;
 
 /**
  * @author peiheng.zph created on 17/3/19 下午11:53
