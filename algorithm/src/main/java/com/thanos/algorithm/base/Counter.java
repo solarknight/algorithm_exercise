@@ -1,7 +1,7 @@
 package com.thanos.algorithm.base;
 
 /**
- * @author peiheng.zph created on 17/3/19 下午11:53
+ * @author solarknight created on 17/3/19 下午11:53
  * @version 1.0
  */
 public final class Counter {
