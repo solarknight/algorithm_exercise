@@ -1,10 +1,14 @@
-package com.thanos.algorithm.base;
+package com.thanos.algorithm.exercise;
 
 import org.openjdk.jmh.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
 /**
+ * Write a code fragment that puts the binary representation of a positive integer N
+ * into a String s.<br/>
+ * BTW: Java has a built-in method {@link Integer#toBinaryString(int)} for this job.<br/>
+ *
  * Created by solarknight on 2017/4/3.
  */
 public class BinaryNumber {
