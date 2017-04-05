@@ -29,11 +29,11 @@ public class AddTwoNumbers {
     int sum;
     while (curL1 != null || curL2 != null || carry != 0) {
       sum = (curL1 != null ? curL1.val : 0) + (curL2 != null ? curL2.val : 0) + carry;
-      carry = sum > 9 ? 1 : 0;
-      cur.next = new ListNode(sum - 10 * carry);
+      carry = sum / 10;
+      cur.next = new ListNode(sum % 10);
       cur = cur.next;
-      curL1 = curL1 == null ? null : curL1.next;
-      curL2 = curL2 == null ? null : curL2.next;
+      curL1 = curL1 != null ? curL1.next : null;
+      curL2 = curL2 != null ? curL2.next : null;
     }
     return head.next;
   }
