@@ -5,11 +5,12 @@ package com.thanos.algorithm.jav;
  * Add the two numbers and return it as a linked list.<br/>
  * You may assume the two numbers do not contain any leading zero, except the number 0 itself.
  * {@see https://leetcode.com/problems/add-two-numbers/#/description}
- *
+ * <p>
  * Created by solarknight on 2017/4/4.
  */
 public class AddTwoNumbers {
-  public class ListNode {
+
+  public static class ListNode {
     int val;
     ListNode next;
 
@@ -19,6 +20,22 @@ public class AddTwoNumbers {
   }
 
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-    return null;
+    ListNode head = new ListNode(0);
+    ListNode cur = head;
+    ListNode curL1 = l1;
+    ListNode curL2 = l2;
+
+    int carry = 0;
+    int sum;
+    while (curL1 != null || curL2 != null || carry != 0) {
+      sum = (curL1 != null ? curL1.val : 0) + (curL2 != null ? curL2.val : 0) + carry;
+      carry = sum > 9 ? 1 : 0;
+      cur.next = new ListNode(sum - 10 * carry);
+      cur = cur.next;
+      curL1 = curL1 == null ? null : curL1.next;
+      curL2 = curL2 == null ? null : curL2.next;
+    }
+    return head.next;
   }
+
 }
