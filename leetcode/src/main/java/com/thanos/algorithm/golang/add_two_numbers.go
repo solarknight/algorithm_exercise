@@ -7,12 +7,9 @@
  */
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     head := &ListNode{0, nil}
-    cur := head
-    c1 := l1
-    c2 := l2
+    cur, c1, c2 := head, l1, l2
 
-    carry := 0
-    sum := 0
+    carry, sum := 0, 0
     for ; c1 != nil || c2 != nil || carry != 0; {
         sum = carry;
         if c1 != nil {

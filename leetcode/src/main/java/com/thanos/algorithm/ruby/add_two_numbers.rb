@@ -12,11 +12,9 @@
 # @return {ListNode}
 def add_two_numbers(l1, l2)
     head = ListNode.new(0)
-    cur = head
-    c1, c2 = l1, l2
+    cur, c1, c2 = head, l1, l2
+    carry, sum = 0, 0
 
-    carry = 0
-    sum = 0
     while c1 || c2 || carry != 0
         sum = carry
         if c1 then
