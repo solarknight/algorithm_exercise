@@ -1,5 +1,3 @@
-package com.thanos.algorithm.jav;
-
 import java.util.HashMap;
 import java.util.Map;
 
