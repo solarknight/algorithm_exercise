@@ -4,7 +4,7 @@
  *
  * {@see https://leetcode.com/problems/median-of-two-sorted-arrays/#/description}
  *
- * @author solarknight.zph created on 17/4/8 下午8:19
+ * @author solarknight created on 17/4/8 下午8:19
  * @version 1.0
  */
 public class TwoSortedArrayMedian {
