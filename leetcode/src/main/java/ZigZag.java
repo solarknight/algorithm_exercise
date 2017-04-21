@@ -11,9 +11,9 @@ public class ZigZag {
       return s;
     }
 
-    StringBuilder[] sb = new StringBuilder[numRows + 1];
+    StringBuilder[] sb = new StringBuilder[numRows];
     for (int i = 0; i < sb.length; i++) {
-      sb[i] = new StringBuilder(s.length() / (numRows - 1));
+      sb[i] = new StringBuilder();
     }
 
     int incr = 0;
@@ -28,10 +28,10 @@ public class ZigZag {
       i += incr;
     }
 
-    for (int i = 0; i < sb.length - 1; i++) {
-      sb[numRows].append(sb[i].toString());
+    for (int i = 1; i < sb.length; i++) {
+      sb[0].append(sb[i]);
     }
-    return sb[numRows].toString();
+    return sb[0].toString();
   }
 
   public static void main(String[] args) {
