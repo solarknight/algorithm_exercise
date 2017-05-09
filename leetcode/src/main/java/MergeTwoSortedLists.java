@@ -19,10 +19,8 @@ public class MergeTwoSortedLists {
     if (l2 == null) {
       return l1;
     }
-    if (l2.val < l1.val) {
-      return mergeTwoLists(l2, l1);
-    }
-    l1.next = mergeTwoLists(l1.next, l2);
-    return l1;
+    ListNode head = l1.val < l2.val ? l1 : l2;
+    head.next = head == l1 ? mergeTwoLists(l1.next, l2) : mergeTwoLists(l1, l2.next);
+    return head;
   }
 }
