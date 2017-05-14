@@ -6,10 +6,7 @@ import java.util.Stack;
 public class ValidParentheses {
 
   public boolean isValid(String s) {
-    if (s.length() == 0) {
-      return true;
-    }
-    if (s.length() == 1) {
+    if (s.length() % 2 == 1) {
       return false;
     }
     Stack<Character> stack = new Stack<>();
