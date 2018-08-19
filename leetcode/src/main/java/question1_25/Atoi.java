@@ -1,3 +1,5 @@
+package question1_25;
+
 /**
  * Implement atoi to convert a string to an integer.
  * {@see https://leetcode.com/problems/string-to-integer-atoi/#/description}
